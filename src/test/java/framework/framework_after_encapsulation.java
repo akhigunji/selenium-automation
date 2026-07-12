@@ -16,11 +16,13 @@ public class framework_after_encapsulation extends BaseTest{
 	public void framework_after_encapsulation() throws InterruptedException, IOException {
 		// TODO Auto-generated method stub
 		String productname="ZARA COAT 3";
+		
 		//login page
 		Loginpage1 loginpage=launchapplication();
 		PlpPage1 plp=loginpage.loginApplication("grey2022@gmail.com", "Anna@12345");
 		//products page
-		//clicking cart  icon
+		
+		//clicking cart icon
 		CartPage1 cartpage=plp.addProductToCart(productname);
 		cartpage.clickCartButton();		
 		//comparing product names in cart with the required product
@@ -33,6 +35,7 @@ public class framework_after_encapsulation extends BaseTest{
 		//click on place order button
 		
 		//confirm message in confirmation page
+		
 		ConfirmationPage1 confirmationpage=checkoutpage.clickPlaceOrderButton();
 		Assert.assertTrue(confirmationpage.getMsgInConfirmationPage());
 		
