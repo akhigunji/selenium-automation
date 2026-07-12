@@ -34,7 +34,7 @@ public class framework_after_encapsulation extends BaseTest{
 		checkoutpage.selectdropdownoption();			
 		//click on place order button
 		
-		//confirm message in confirmation page
+		//check confirm message in confirmation page
 		
 		ConfirmationPage1 confirmationpage=checkoutpage.clickPlaceOrderButton();
 		Assert.assertTrue(confirmationpage.getMsgInConfirmationPage());
